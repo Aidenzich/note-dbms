@@ -1,9 +1,9 @@
 ### Types of outer Join
 | Type | Symbol | illustration |
 |-|-|-|
-| Full Outer Join | $R_1$ ⟗ $R_2$ |![](https://i.imgur.com/hzFJrKT.png)|
-| Right Outer Join | $R_1$ ⟖ $R_2$ |![](https://i.imgur.com/VUQoWOj.png)|
-| Left Outer Join |  $R_1$ ⟕ $R_2$ | ![](https://i.imgur.com/pvabBQK.png) |
+| Full Outer Join | $R_1$ ⟗ $R_2$ |![full_outer_join](https://i.imgur.com/hzFJrKT.png)|
+| Right Outer Join | $R_1$ ⟖ $R_2$ |![right_outer_join](https://i.imgur.com/VUQoWOj.png)|
+| Left Outer Join |  $R_1$ ⟕ $R_2$ | ![left_outer_join](https://i.imgur.com/pvabBQK.png) |
 
 ### Compare with different Join methods
 | Context | Note |
