@@ -8,7 +8,7 @@
 | **Relationship Type** | ![](https://i.imgur.com/MrMmnjh.png) | - 代表兩個以上Entity之間的關係 |
 | **Total Participation** | ![](https://i.imgur.com/yJyRmnA.png) | - Entity Set 內的每一個 Entity 都一定存在有這樣的關係，例如：每個員工都需對應一個部門 |
 | **Partial Participation**  | 見以下2種 | 非 total participation 的關係 |
-| Cardinality(基數) Ratio 1:N | ![](https://i.imgur.com/4NeDOKt.png) |     - 每一個 Employee 最多有一個 WorksFor 的關係, 因為一個員工只能隸屬於一個部門, Department 則可有多個 WorksFor 的關係, 因為一個部門可以有多個員工. 圖左員工右部門 |
+| Cardinality(基數) Ratio 1:N | ![](https://i.imgur.com/4NeDOKt.png) |     - 每一個 Employee 最多有一個 WorksFor 的關係, 因為一個員工只能隸屬於一個部門, Department 則可有多個 WorksFor 的關係, 因為一個部門可以有多個員工. <br> 圖左員工右部門 |
 | Structural Constraint (min, max) | ![](https://i.imgur.com/UDv3K8Q.png) | - 指一個實體最少有 `min` 個最多有 `max` 個關係. 如假設一個部門最少有四個員工, 則 Department 和 WorksFor 之間的 Structure Constraint 為(4,N). |
 | **Identifying Relationship Type** | ![](https://i.imgur.com/G1dCCjO.png) | - `Weak Entity Type` 所依附的 `Entity Type` 的實體稱為 `identifying owner`, 兩個Entity Type 間的關係即 **identifying relationship**. |
 | **Attribute** | ![](https://i.imgur.com/zsnqmyG.png) | - table's `column` |
