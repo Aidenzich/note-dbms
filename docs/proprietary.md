@@ -6,12 +6,4 @@
 | **Support of mutiple views of the data** | - Each user may see a different view of the database, which describes only the data of interest to that user </br> - It may also contain some **virtual data that is derived from the database files but its not explicitly stored**. </br> (中：每個用戶都擁有各自的資料庫視圖。且可能含有由資料庫內資料所推導出來的虛擬資料) |
 | **Program-data independence** | The ability to modify the scheme without affecting the programs and the application to be rewritten. </br> Data is separated from the programs, so that the changes made to the data will **not affect the program execution and the application**. </br> (中：對數據做的改變不會影響應用的執行) |
 
-### Union compatibility
-- **Same Degree:** 兩個關聯表R1 與 R2 的屬性集必須具有相同的維度(Degree)，也就是屬性數目必須相同(n=m)。
-- **Same Domain:** 兩個關聯表 R1 與 R2 的相對屬性都必須定義於相同的值域 (Domain) 上。
 
-滿足兩者條件即符合 Union compatibility
-
-
-### Cross Product Examples
-![](https://i.imgur.com/MDcrf3i.png)

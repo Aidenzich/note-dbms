@@ -9,7 +9,7 @@ Constraints are **conditions that must hold on all valid relation instances**. T
         - 中：superkey 只有一個 `attribute`，則該 attribute 為 key 值; 由多個 `attributes` 組成
     - If a relation has several candidate keys, one is chosen arbitrarily to be the primary key. The primary key attributes are underlined.
 2. **Entity Integrity**
-    - The primary key **cannot have null values** in any tuple of R.
+    - The primary key **cannot have null values** in any tuple of $R$.
     - (Note) integrity: the state of being whole and undivided.
 3. **Referential Integrity**
     - Tuples in the $R_1$ have attributes **Foreign Key** that reference the **Primary Key** attributes.
