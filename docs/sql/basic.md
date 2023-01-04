@@ -1,4 +1,4 @@
-# Basics
+# SQLs Cheat Table
 [below example is modified from here](https://www.sqltutorial.org/sql-cheat-sheet/)
 ## Querying
 | Purpose | SQL | Description |
@@ -22,7 +22,7 @@
 | Produce a Cartesian product of rows in tables | `SELECT c1, c2 FROM t1 CROSS JOIN t2;` <br> or <br> `SELECT c1, c2 FROM t1, t2;` |
 | Another way to perform cross join | `SELECT c1, c2 FROM t1, t2;` | |
 | Join t1 to itself using INNER JOIN clause | `SELECT c1, c2 FROM t1 A INNER JOIN t1 B ON condition` |
-
+- To understand the difference between different join methods, you can see [HERE](./joins.md) for more informations.
 ## Using SQL Operators
 | Purpose | SQL | Description |
 |-|-|-|
