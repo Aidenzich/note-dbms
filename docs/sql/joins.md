@@ -1,7 +1,9 @@
-### Types of outer Join
+## SQL JOINS
+![](../../assets/sql_joins.png)
+### Types of Outer Join
 | Type | Symbol | illustration |
 |-|-|-|
-| Full Outer Join | $R_1$ ⟗ $R_2$ |![full_outer_join](../assets/full_outer_join.png)|
+| Full Outer Join | $R_1$ ⟗ $R_2$ |![full_outer_join](../../assets/full_outer_join.png)|
 | Right Outer Join | $R_1$ ⟖ $R_2$ |![right_outer_join](https://i.imgur.com/VUQoWOj.png)|
 | Left Outer Join |  $R_1$ ⟕ $R_2$ | ![left_outer_join](https://i.imgur.com/pvabBQK.png) |
 
