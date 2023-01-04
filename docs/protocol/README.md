@@ -60,8 +60,17 @@ In DBMS, a protocol refers to the set of rules or conventions that are followed 
     | Weakness | Waste storage space, and need to do `garbage collection` |
 
 
-### Using `Wait-die` and `Wound-wait` to prevent `deadlock` and avoid `starvation`
-| Proprietary | Definition |
-|-|-|
-| `Wait-Die` | 較早進入的交易可等待，較晚進入的交易被撤回。 <br> 假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前，那麼當 ${TS}_1$ 要使用 ${TS}_2$ 已經鎖定的資料時，則允許 ${TS}_1$ 繼續等待。 相反的，假設 ${TS}_2$ 要 ${TS}_1$ 已經鎖定的資料時，則 $TS_2$ 必須立即中止執行而死亡，之後再以相同的交易時間戳重新啟動執行以避免`Starvation`問題產生。 |
-| `Wound-Wait` | 較早進入的交易可搶較晚進入交易之資源，而較晚進入的交易則需等待。 <br>  假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前。則 ${TS}_1$ 要使用 ${TS}_2$ 鎖定的資料時，則${TS}_2$ 必須立即中止執行，而後再以相同時間戳重新啟動執行，從而避免 `Starvation` 產生。相反地，假設 ${TS}_2$ 要使用 ${TS}_1$ 已經鎖定的資料時，則 ${TS_2}$ 必須繼續等待 |
+### Using `wait-die` and `wound-wait` to prevent `deadlock` and avoid `starvation`
+| Proprietary | Definition | Preemptive |
+|-|-|-|
+| `wait-die` | 較早進入的交易可等待，較晚進入的交易被撤回。 <br> 假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前，那麼當 ${TS}_1$ 要使用 ${TS}_2$ 已經鎖定的資料時，則允許 ${TS}_1$ 繼續等待。 相反的，假設 ${TS}_2$ 要 ${TS}_1$ 已經鎖定的資料時，則 $TS_2$ 必須立即中止執行而死亡，之後再以相同的交易時間戳重新啟動執行以避免`Starvation`問題產生。 | `non-preemptive` |
+| `wound-wait` | 較早進入的交易可搶較晚進入交易之資源，而較晚進入的交易則需等待。 <br>  假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前。則 ${TS}_1$ 要使用 ${TS}_2$ 鎖定的資料時，則${TS}_2$ 必須立即中止執行，而後再以相同時間戳重新啟動執行，從而避免 `Starvation` 產生。相反地，假設 ${TS}_2$ 要使用 ${TS}_1$ 已經鎖定的資料時，則 ${TS_2}$ 必須繼續等待 | `preemptive` |
+
+- The diffirence between `wait-die` and `wound-wait`
+In `wait-die`, The newer transactions are killed when **the newer transaction makes a request** for a lock being held by an older transactions. 
+In `wound-wait`, The newer transactions are killed when **an older transaction makes a request** for a lock being held by the newer transactions.
+
+    | | $T_n$ is older than $T_k$ | $T_n$ is younger than $T_k$ |
+    |-|-|-|
+    | wait-die   | $T_n$ waits | $T_n$ dies|
+    | wound-wait | $T_k$ aborts| $T_k$ waits|
