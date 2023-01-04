@@ -5,8 +5,8 @@
 ## Summary Table
 | Name | File |
 |-|-|
-| Relational Algebra | [✓](docs/algebra.md) |
-| ER Diagram | [✓](docs/er.md) |
-| Proprietaries in DBMS | [✓](docs/proprietary.md) |
-| Constraints in DBMS | [✓](docs/constraints.md) |
-| SQL CHEAT TABLE | [✓](docs/sql/)|
+| Proprietaries | [✓](docs/proprietary.md) |
+| CHEAT TABLE of Relational Algebra | [✓](docs/algebra.md) |
+| CHEAT TABLE of SQL | [✓](docs/sql/)|
+| CHEAT TABLE of ER Diagram | [✓](docs/er.md) |
+| Protocol in DBMS | [✓](docs/protocol/) |
