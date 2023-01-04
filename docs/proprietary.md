@@ -25,7 +25,7 @@ Constraints are **conditions that must hold on all valid relation instances**. T
 | `transitive dependency` | Whenever some **indirect relationship** happens to cause `functional dependency (FC)`. e.g. if $A \rightarrow B$ and $B \rightarrow C$ are true, then $A \rightarrow C$ happens to be a `transitive dependency`.  |
 
 ### Protocol
-In DBMS, a `protocol` refers to the set of rules or conventions that are followed to ensure that updates to a database are made `consistently` and `correctly`, even in the presence of concurrent access by multiple users or applications.
+In DBMS, a `protocol` refers to the set of rules or conventions that are followed to ensure that updates to a database are made `consistently` and `correctly`, even in the presence of concurrent access by multiple users or applications. Check [HERE](./protocol/) for more information.
 
 | Proprietary | Definition |
 |-|-|
@@ -34,16 +34,7 @@ In DBMS, a `protocol` refers to the set of rules or conventions that are followe
 | `Optimistic concurrency protocol` | 假設所有交易皆可順利且正確地進行，因此在交易執行過程中不需要作任何的檢查動作 |
 | `Shadow paging recovery protocol` | 當交易進行時，若要更新資料庫中的某一磁碟分頁的資料時，會先將要更新得值另外存放到新的磁碟分頁上，而不是直接覆蓋舊磁碟分頁的資料 |
 
-<details><summary>Use Wait-Die and Wound-Wait to prevent deadlock and avoid starvation </summary>
 
-#### Use `Wait-die` and `Wound-wait` to prevent `deadlock` and avoid `starvation`
-| Proprietary | Definition |
-|-|-|
-| `Deadlock` | It's an undesired situation in which two or more transactions have to wait indefinitely for each other in order to get terminated, but none of the transactions is willing to give up the allocated CPU and memory resources that the other one needs. |
-| `Starvation` | `Starvation` occurs if a process is `indefinitely postponed`. This may happen if the process requires a resource for execution that it is never alloted or if the process is never provided the processor for some reason. |
-| `Wait-Die` | 較早進入的交易可等待，較晚進入的交易被撤回。 <br> 假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前，那麼當 ${TS}_1$ 要使用 ${TS}_2$ 已經鎖定的資料時，則允許 ${TS}_1$ 繼續等待。 相反的，假設 ${TS}_2$ 要 ${TS}_1$ 已經鎖定的資料時，則 $TS_2$ 必須立即中止執行而死亡，之後再以相同的交易時間戳重新啟動執行以避免`Starvation`問題產生。 |
-| `Wound-Wait` | 較早進入的交易可搶較晚進入交易之資源，而較晚進入的交易則需等待。 <br>  假設 ${TS}_1 < {TS}_2$，表示 ${TS}_1$ 是發生在 ${TS}_2$ 之前。則 ${TS}_1$ 要使用 ${TS}_2$ 鎖定的資料時，則${TS}_2$ 必須立即中止執行，而後再以相同時間戳重新啟動執行，從而避免 `Starvation` 產生。相反地，假設 ${TS}_2$ 要使用 ${TS}_1$ 已經鎖定的資料時，則 ${TS_2}$ 必須繼續等待 |
-</details>
 
 ## Difficulty in DBMS
 | Proprietary | Definition |
