@@ -40,31 +40,31 @@ GROUP BY C.CID
 
 ### 推 2NF 跟 3NF
 - Relation is 
-$$
-R(A, B, C, D, E, F, G, H, I, J)
-$$
+    $$
+    R(A, B, C, D, E, F, G, H, I, J)
+    $$
 - Functional Dependencies is 
-$$
-A, B \rightarrow C, D, E, F, G, H, I, J \\
-A \rightarrow I \\
-B \rightarrow J \\
-D \rightarrow E, F \\
-F \rightarrow G, H \\
-$$
+    $$
+    A, B \rightarrow C, D, E, F, G, H, I, J \\
+    A \rightarrow I \\
+    B \rightarrow J \\
+    D \rightarrow E, F \\
+    F \rightarrow G, H \\
+    $$
 
 #### ANS
 - 2NF
-$$
-R_1(A, B, C, D, E, F, G, H) \\
-R_2(A, I) \\
-R_3(B, J)
-$$
+    $$
+    R_1(A, B, C, D, E, F, G, H) \\
+    R_2(A, I) \\
+    R_3(B, J)
+    $$
 - 3NF
-$$
-R_1(A, B, D) \\
-R_1(D, E, F) \\
-R_2(F, G, H) \\
-R_3(A, I) \\
-R_4(B, J)
-$$
+    $$
+    R_1(A, B, D) \\
+    R_1(D, E, F) \\
+    R_2(F, G, H) \\
+    R_3(A, I) \\
+    R_4(B, J)
+    $$
 
